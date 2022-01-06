@@ -51,7 +51,7 @@ public class Main {
                     health -= damageTaken;
 
                     System.out.println("\t> You strike the " + enemy + " for " + damageDealt + " damage.");
-                    System.out.println("\t> You recieve " + damageTaken + " in retaliation!");
+                    System.out.println("\t> You receive " + damageTaken + " in retaliation!");
 
                     if (health < 1) {
                         System.out.println("\t> You have taken too much damage, you are too weak to go on!");
@@ -68,7 +68,7 @@ public class Main {
                         System.out.println("\t> You have no health potions left! Defeat enemies for a chance to get one");
                     }
                 } else if (input.equals("3")) {
-                    System.out.println("+tYou run away from the " + enemy + "!");
+                    System.out.println("\tYou run away from the " + enemy + "!");
                     continue GAME;
 
                 } else {
