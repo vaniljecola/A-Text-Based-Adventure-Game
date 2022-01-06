@@ -24,7 +24,7 @@ public class Main {
 
         boolean running = true;
 
-        System.out.println("Welcome to the dungeon");
+        System.out.println("Welcome to the jungle");
 
         GAME:
         while (running) {
@@ -87,12 +87,12 @@ public class Main {
             System.out.println(" # You have " + health + "HP left. #");
             if (rand.nextInt(100) < healthPotionDropChance) {
                 numHealthPotions++;
-                System.out.println(" # The " + enemy + "dropped a health potion! # ");
-                System.out.println(" # You now have" + numHealthPotions + "health potion(s). # ");
+                System.out.println(" # The " + enemy + " dropped a health potion! # ");
+                System.out.println(" # You now have" + numHealthPotions + " health potion(s). # ");
             }
             System.out.println("______________________________________________");
             System.out.println("What would you like to do?");
-            System.out.println("1. Contionue fighting");
+            System.out.println("1. Continue fighting");
             System.out.println("2. Exit dungeon");
 
             String input = in.nextLine();
