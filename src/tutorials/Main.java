@@ -12,6 +12,7 @@ public class Main {
 
         //Game variables
         String[] enemies = {"Skeleton", "Zombie", "Warrior", "Assassin"};
+        String[] attacks = {"Sword Slash", "Boot Kick", "Headbut", "Uppercut"};
         int maxEnemyHealth = 75;
         int enemyAttackDamage = 25;
 
@@ -44,6 +45,8 @@ public class Main {
 
                 String input = in.nextLine();
                 if (input.equals("1")) {
+                    String attack = attacks[rand.nextInt(attacks.length)];
+
                     int damageDealt = rand.nextInt(attackDamage); //Generate random num between 0 and 50
                     int damageTaken = rand.nextInt(enemyAttackDamage); //Generate random num between 0 and 25
 
@@ -51,6 +54,7 @@ public class Main {
                     health -= damageTaken;
 
                     System.out.println("\t> You strike the " + enemy + " for " + damageDealt + " damage.");
+                    System.out.println("\t> The enemy uses " + attack);
                     System.out.println("\t> You receive " + damageTaken + " in retaliation!");
 
                     if (health < 1) {
@@ -58,7 +62,7 @@ public class Main {
                         break;
                     }
                 } else if (input.equals("2")) {
-                    if (numHealthPotions > 0) {
+                    if (numHealthPotions > 0 && health < 100) {
                         health += healthPotionHealAmount;
                         numHealthPotions--;
                         System.out.println("\t> Yoy drink a health potion, healing yourself for " + healthPotionHealAmount + "."
